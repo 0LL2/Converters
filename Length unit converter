@@ -1,0 +1,565 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MultiConverter
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            comboBox1.Items.Add("mm");
+            comboBox1.Items.Add("cm");
+            comboBox1.Items.Add("dm");
+            comboBox1.Items.Add("m");
+            comboBox1.Items.Add("dam");
+            comboBox1.Items.Add("hm");
+            comboBox1.Items.Add("km");
+
+            comboBox2.Items.Add("mm");
+            comboBox2.Items.Add("cm");
+            comboBox2.Items.Add("dm");
+            comboBox2.Items.Add("m");
+            comboBox2.Items.Add("dam");
+            comboBox2.Items.Add("hm");
+            comboBox2.Items.Add("km");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (this.comboBox1.Text)
+                {
+                    case "mm":
+                        switch (this.comboBox2.Text)
+                        {
+                            case "mm":
+                                double val = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val * 1);
+                                break;
+                            case "cm":
+                                double val2 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val2 * 0.1);
+                                break;
+                            case "dm":
+                                double val3 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val3 * 0.01);
+                                break;
+                            case "m":
+                                double val4 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val4 * 0.001);
+                                break;
+                            case "dam":
+                                double val5 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val5 * 0.0001);
+                                break;
+                            case "hm":
+                                double val6 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val6 * 0.00001);
+                                break;
+                            case "km":
+                                double val7 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val7 * 0.000001);
+                                break;
+                            default:
+                                MessageBox.Show("Error");
+                                break;
+                        }
+                        break;
+                    case "cm":
+                        switch (this.comboBox2.Text)
+                        {
+                            case "mm":
+                                double val = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val * 10);
+                                break;
+                            case "cm":
+                                double val2 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val2 * 1);
+                                break;
+                            case "dm":
+                                double val3 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val3 * 0.1);
+                                break;
+                            case "m":
+                                double val4 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val4 * 0.01);
+                                break;
+                            case "dam":
+                                double val5 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val5 * 0.001);
+                                break;
+                            case "hm":
+                                double val6 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val6 * 0.0001);
+                                break;
+                            case "km":
+                                double val7 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val7 * 0.00001);
+                                break;
+                            default:
+                                MessageBox.Show("Error");
+                                break;
+                        }
+                        break;
+                    case "dm":
+                        switch (this.comboBox2.Text)
+                        {
+                            case "mm":
+                                double val = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val * 100);
+                                break;
+                            case "cm":
+                                double val2 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val2 * 10);
+                                break;
+                            case "dm":
+                                double val3 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val3 * 1);
+                                break;
+                            case "m":
+                                double val4 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val4 * 0.1);
+                                break;
+                            case "dam":
+                                double val5 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val5 * 0.01);
+                                break;
+                            case "hm":
+                                double val6 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val6 * 0.001);
+                                break;
+                            case "km":
+                                double val7 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val7 * 0.0001);
+                                break;
+                            default:
+                                MessageBox.Show("Error");
+                                break;
+                        }
+                        break;
+                    case "m":
+                        switch (this.comboBox2.Text)
+                        {
+                            case "mm":
+                                double val = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val * 1000);
+                                break;
+                            case "cm":
+                                double val2 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val2 * 100);
+                                break;
+                            case "dm":
+                                double val3 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val3 * 10);
+                                break;
+                            case "m":
+                                double val4 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val4 * 1);
+                                break;
+                            case "dam":
+                                double val5 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val5 * 0.1);
+                                break;
+                            case "hm":
+                                double val6 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val6 * 0.01);
+                                break;
+                            case "km":
+                                double val7 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val7 * 0.001);
+                                break;
+                            default:
+                                MessageBox.Show("Error");
+                                break;
+                        }
+                        break;
+                    case "dam":
+                        switch (this.comboBox2.Text)
+                        {
+                            case "mm":
+                                double val = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val * 10000);
+                                break;
+                            case "cm":
+                                double val2 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val2 * 1000);
+                                break;
+                            case "dm":
+                                double val3 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val3 * 100);
+                                break;
+                            case "m":
+                                double val4 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val4 * 10);
+                                break;
+                            case "dam":
+                                double val5 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val5 * 1);
+                                break;
+                            case "hm":
+                                double val6 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val6 * 0.1);
+                                break;
+                            case "km":
+                                double val7 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val7 * 0.01);
+                                break;
+                            default:
+                                MessageBox.Show("Error");
+                                break;
+                        }
+                        break;
+                    case "hm":
+                        switch (this.comboBox2.Text)
+                        {
+                            case "mm":
+                                double val = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val * 100000);
+                                break;
+                            case "cm":
+                                double val2 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val2 * 10000);
+                                break;
+                            case "dm":
+                                double val3 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val3 * 1000);
+                                break;
+                            case "m":
+                                double val4 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val4 * 100);
+                                break;
+                            case "dam":
+                                double val5 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val5 * 10);
+                                break;
+                            case "hm":
+                                double val6 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val6 * 1);
+                                break;
+                            case "km":
+                                double val7 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val7 * 0.1);
+                                break;
+                            default:
+                                MessageBox.Show("Error");
+                                break;
+                        }
+                        break;
+                    case "km":
+                        switch (this.comboBox2.Text)
+                        {
+                            case "mm":
+                                double val = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val * 1000000);
+                                break;
+                            case "cm":
+                                double val2 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val2 * 100000);
+                                break;
+                            case "dm":
+                                double val3 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val3 * 10000);
+                                break;
+                            case "m":
+                                double val4 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val4 * 1000);
+                                break;
+                            case "dam":
+                                double val5 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val5 * 100);
+                                break;
+                            case "hm":
+                                double val6 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val6 * 10);
+                                break;
+                            case "km":
+                                double val7 = Convert.ToDouble(textBox1.Text);
+                                textBox2.Text = Convert.ToString(val7 * 1);
+                                break;
+                            default:
+                                MessageBox.Show("Error");
+                                break;
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch
+            {
+
+            }
+            #region
+            /*switch (this.comboBox2.Text)
+            {
+                case "mm":
+                    switch (this.comboBox1.Text)
+                    {
+                        case "mm":
+                            double val = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val * 1);
+                            break;
+                        case "cm":
+                            double val2 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val2 * 0.1);
+                            break;
+                        case "dm":
+                            double val3 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val3 * 0.01);
+                            break;
+                        case "m":
+                            double val4 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val4 * 0.001);
+                            break;
+                        case "dam":
+                            double val5 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val5 * 0.0001);
+                            break;
+                        case "hm":
+                            double val6 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val6 * 0.00001);
+                            break;
+                        case "km":
+                            double val7 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val7 * 0.000001);
+                            break;
+                        default:
+                            MessageBox.Show("Error");
+                            break;
+                    }
+                    break;
+                case "cm":
+                    switch (this.comboBox2.Text)
+                    {
+                        case "mm":
+                            double val = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val * 10);
+                            break;
+                        case "cm":
+                            double val2 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val2 * 1);
+                            break;
+                        case "dm":
+                            double val3 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val3 * 0.1);
+                            break;
+                        case "m":
+                            double val4 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val4 * 0.01);
+                            break;
+                        case "dam":
+                            double val5 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val5 * 0.001);
+                            break;
+                        case "hm":
+                            double val6 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val6 * 0.0001);
+                            break;
+                        case "km":
+                            double val7 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val7 * 0.00001);
+                            break;
+                        default:
+                            MessageBox.Show("Error");
+                            break;
+                    }
+                    break;
+                case "dm":
+                    switch (this.comboBox2.Text)
+                    {
+                        case "mm":
+                            double val = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val * 100);
+                            break;
+                        case "cm":
+                            double val2 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val2 * 10);
+                            break;
+                        case "dm":
+                            double val3 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val3 * 1);
+                            break;
+                        case "m":
+                            double val4 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val4 * 0.1);
+                            break;
+                        case "dam":
+                            double val5 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val5 * 0.01);
+                            break;
+                        case "hm":
+                            double val6 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val6 * 0.001);
+                            break;
+                        case "km":
+                            double val7 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val7 * 0.0001);
+                            break;
+                        default:
+                            MessageBox.Show("Error");
+                            break;
+                    }
+                    break;
+                case "m":
+                    switch (this.comboBox2.Text)
+                    {
+                        case "mm":
+                            double val = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val * 1000);
+                            break;
+                        case "cm":
+                            double val2 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val2 * 100);
+                            break;
+                        case "dm":
+                            double val3 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val3 * 10);
+                            break;
+                        case "m":
+                            double val4 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val4 * 1);
+                            break;
+                        case "dam":
+                            double val5 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val5 * 0.1);
+                            break;
+                        case "hm":
+                            double val6 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val6 * 0.01);
+                            break;
+                        case "km":
+                            double val7 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val7 * 0.001);
+                            break;
+                        default:
+                            MessageBox.Show("Error");
+                            break;
+                    }
+                    break;
+                case "dam":
+                    switch (this.comboBox2.Text)
+                    {
+                        case "mm":
+                            double val = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val * 10000);
+                            break;
+                        case "cm":
+                            double val2 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val2 * 1000);
+                            break;
+                        case "dm":
+                            double val3 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val3 * 100);
+                            break;
+                        case "m":
+                            double val4 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val4 * 10);
+                            break;
+                        case "dam":
+                            double val5 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val5 * 1);
+                            break;
+                        case "hm":
+                            double val6 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val6 * 0.1);
+                            break;
+                        case "km":
+                            double val7 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val7 * 0.01);
+                            break;
+                        default:
+                            MessageBox.Show("Error");
+                            break;
+                    }
+                    break;
+                case "hm":
+                    switch (this.comboBox2.Text)
+                    {
+                        case "mm":
+                            double val = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val * 100000);
+                            break;
+                        case "cm":
+                            double val2 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val2 * 10000);
+                            break;
+                        case "dm":
+                            double val3 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val3 * 1000);
+                            break;
+                        case "m":
+                            double val4 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val4 * 100);
+                            break;
+                        case "dam":
+                            double val5 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val5 * 10);
+                            break;
+                        case "hm":
+                            double val6 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val6 * 1);
+                            break;
+                        case "km":
+                            double val7 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val7 * 0.1);
+                            break;
+                        default:
+                            MessageBox.Show("Error");
+                            break;
+                    }
+                    break;
+                case "km":
+                    switch (this.comboBox2.Text)
+                    {
+                        case "mm":
+                            double val = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val * 1000000);
+                            break;
+                        case "cm":
+                            double val2 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val2 * 100000);
+                            break;
+                        case "dm":
+                            double val3 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val3 * 10000);
+                            break;
+                        case "m":
+                            double val4 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val4 * 1000);
+                            break;
+                        case "dam":
+                            double val5 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val5 * 100);
+                            break;
+                        case "hm":
+                            double val6 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val6 * 10);
+                            break;
+                        case "km":
+                            double val7 = Convert.ToDouble(textBox2.Text);
+                            textBox1.Text = Convert.ToString(val7 * 1);
+                            break;
+                        default:
+                            MessageBox.Show("Error");
+                            break;
+                    }
+                    break;
+                default:
+                    break;
+            }*/
+            #endregion
+        }
+    }
+}
